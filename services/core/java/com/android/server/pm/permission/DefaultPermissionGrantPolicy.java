@@ -964,6 +964,12 @@ final class DefaultPermissionGrantPolicy {
         grantPermissionsToSystemPackage(pm,"com.google.android.apps.restore", userId, ALWAYS_LOCATION_PERMISSIONS, GOOGLE_RESTORE_PERMISSIONS);
         grantSystemFixedPermissionsToSystemPackage(pm,"com.google.android.apps.restore", userId, GOOGLE_RESTORE_PERMISSIONS_FIXED);
 
+
+        // Carrier Setup
+        grantSystemFixedPermissionsToSystemPackage(pm,"com.google.android.carriersetup", userId, PHONE_PERMISSIONS,
+                SMS_PERMISSIONS);
+
+
         // Flipendo
         grantSystemFixedPermissionsToSystemPackage(pm,
                 getDefaultProviderAuthorityPackage("com.google.android.flipendo", userId),
