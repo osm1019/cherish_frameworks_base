@@ -3756,6 +3756,9 @@ public final class NotificationPanelViewController implements Dumpable {
         }
         float finalAlpha = alpha > 0.84f ? alpha : 0f;
         mNotificationStackScrollLayoutController.setAlpha(finalAlpha);
+        if (mBarState != StatusBarState.KEYGUARD && !isFullyCollapsed() && !isPanelVisibleBecauseOfHeadsUp()) {
+            mCentralSurfaces.updateDismissAllVisibility(true);
+        }
     }
 
     private float getFadeoutAlpha() {
@@ -4297,7 +4300,7 @@ public final class NotificationPanelViewController implements Dumpable {
     }
 
     private boolean isPanelVisibleBecauseOfHeadsUp() {
-        return (mHeadsUpManager.hasPinnedHeadsUp() || mHeadsUpAnimatingAway)
+        return mHeadsUpManager != null && (mHeadsUpManager.hasPinnedHeadsUp() || mHeadsUpAnimatingAway)
                 && mBarState == StatusBarState.SHADE;
     }
 
@@ -5452,7 +5455,7 @@ public final class NotificationPanelViewController implements Dumpable {
         return mExpandedHeight;
     }
 
-    private float getExpandedFraction() {
+    public float getExpandedFraction() {
         return mExpandedFraction;
     }
 
