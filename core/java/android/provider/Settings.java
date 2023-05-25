@@ -5683,12 +5683,6 @@ public final class Settings {
          */
         public static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
 
-		/**
-         * Use doubletap as doze pulse triggers
-         * @hide
-         */
-        public static final String DOZE_TRIGGER_DOUBLETAP = "doze_trigger_doubletap";
-
         /**
          * Whether to launch default music player when headset plugged in
          * @hide
@@ -12206,14 +12200,6 @@ public final class Settings {
          * @hide
          */
         public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
-
-        /**
-         * Whether to show ambient or lockscreen if AoD is disabled
-         * and we do a wake gesture like lift to wake or double tap
-         *
-         * @hide
-         */
-        public static final String AMBIENT_WAKE_GESTURES = "ambient_wake_gestures";
 
         /**
          * Whether to pulse ambient on new music tracks
