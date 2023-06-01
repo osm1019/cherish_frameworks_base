@@ -305,8 +305,6 @@ public class CentralSurfacesImpl implements
             "system:" + Settings.System.FORCE_SHOW_NAVBAR;
     private static final String PULSE_ON_NEW_TRACKS =
             Settings.Secure.PULSE_ON_NEW_TRACKS;
-    private static final String NOTIFICATION_MATERIAL_DISMISS =
-            "system:" + Settings.System.NOTIFICATION_MATERIAL_DISMISS;
     private static final String BANNER_ACTION_CANCEL =
             "com.android.systemui.statusbar.banner_action_cancel";
     private static final String BANNER_ACTION_SETUP =
